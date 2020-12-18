@@ -3,7 +3,6 @@
 package net.ntworld.mergeRequest
 
 import kotlinx.serialization.*
-import kotlinx.serialization.internal.SerialClassDescImpl
 import org.joda.time.DateTime
 
 /**
@@ -12,7 +11,7 @@ import org.joda.time.DateTime
 @Serializer(forClass = DateTime::class)
 object DateTimeSerializer : KSerializer<DateTime> {
 
-    override val descriptor: SerialDescriptor = SerialClassDescImpl("DateTime")
+    override val descriptor: SerialDescriptor = PolymorphicClassDescriptor
 
     override fun deserialize(decoder: Decoder): DateTime {
         return DateTime(decoder.decodeString())

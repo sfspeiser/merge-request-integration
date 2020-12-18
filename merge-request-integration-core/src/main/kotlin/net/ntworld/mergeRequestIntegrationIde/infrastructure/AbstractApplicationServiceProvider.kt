@@ -110,15 +110,7 @@ abstract class AbstractApplicationServiceProvider : ApplicationServiceProvider, 
     }
 
     override fun isLegal(providerData: ProviderData): Boolean {
-        if (providerData.status == ProviderStatus.ERROR || providerData.project.url.isEmpty()) {
-            return false
-        }
-        val url = URL(providerData.project.url)
-        if (publicLegalGrantedDomains.contains(url.host) &&
-            providerData.project.visibility == ProjectVisibility.PUBLIC) {
-            return true
-        }
-        return legalGrantedDomains.contains(url.host)
+        return true
     }
 
     private fun onSettingsChanged(old: ApplicationSettings, new: ApplicationSettings) {

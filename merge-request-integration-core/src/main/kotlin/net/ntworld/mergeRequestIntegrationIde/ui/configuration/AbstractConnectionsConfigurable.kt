@@ -136,8 +136,8 @@ abstract class AbstractConnectionsConfigurable(
 
         override fun changeName(connectionUI: ConnectionUI, oldName: String, newName: String) {
             logger.debug("Name of connection change from $oldName to $newName")
-            val oldId = findIdFromName(oldName).trim()
-            val newId = findIdFromName(newName).trim()
+            val oldId = findIdFromName(oldName.trim()).trim()
+            val newId = findIdFromName(newName.trim()).trim()
 
             val oldData = myData[oldId]
             if (null !== oldData) {

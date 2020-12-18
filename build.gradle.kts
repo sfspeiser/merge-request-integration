@@ -1,14 +1,14 @@
 plugins {
     // "org.jetbrains.kotlin.jvm"
-    kotlin("jvm") version "1.3.50" apply false
+    kotlin("jvm") version "1.3.71" apply false
 
     // "org.jetbrains.kotlin.kapt"
-    kotlin("kapt") version "1.3.50" apply false
+    kotlin("kapt") version "1.3.71" apply false
 
     // "kotlinx-serialization"
-    id("kotlinx-serialization") version "1.3.50" apply false
+    id("kotlinx-serialization") version "1.3.71" apply false
 
-    id("org.jetbrains.intellij") version "0.4.12" apply false
+    id("org.jetbrains.intellij") version "0.6.5" apply false
 }
 
 subprojects {

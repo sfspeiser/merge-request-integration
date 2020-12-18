@@ -11,9 +11,6 @@ import net.ntworld.mergeRequestIntegrationIde.infrastructure.ProjectServiceProvi
 @State(name = "MergeRequestIntegrationApplicationLevel", storages = [(Storage("merge-request-integration.xml"))])
 class EnterpriseApplicationServiceProvider: AbstractApplicationServiceProvider() {
     override fun isLegal(providerData: ProviderData): Boolean {
-        if (!super.isLegal(providerData)) {
-            return CheckLicense.isLicensed
-        }
         return true
     }
 
